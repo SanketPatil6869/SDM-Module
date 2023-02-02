@@ -9,17 +9,15 @@ class BubbleSort {
         arr[3] = 11;
         arr[4] = 7;
 
-        int high = arr[0];
-
         for (int i = 0; i < arr.length; i++) {
 
             for (int j = 0; j < arr.length; j++) {
 
-                if (arr[j] > high) {
+                if (arr[i] < arr[j]) {
 
-                    int temp = arr[j];
-                    arr[j] = high;
-                    high = temp;
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
 
             }
